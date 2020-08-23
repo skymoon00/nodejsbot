@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : '';
-const welcomeChannelName = "welcome";
-const byeChannelName = "goodbye";
+const welcomeChannelName = "안녕하세요";
+const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "어서오세요.";
-const byeChannelComment = "goodbye";
+const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
@@ -32,7 +32,7 @@ client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == 'ping') {
-    return message.reply('양호');
+    return message.reply('pong');
   }
 
   if(message.content == 'embed') {
